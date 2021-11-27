@@ -142,3 +142,108 @@ C:\Users\liza_\Desktop\ИС\ISLab-main\ISLab\obj\Debug\ISLab.csproj.CoreCompileI
 C:\Users\liza_\Desktop\ИС\ISLab-main\ISLab\obj\Debug\ISLab.csproj.CopyComplete
 C:\Users\liza_\Desktop\ИС\ISLab-main\ISLab\obj\Debug\ISLab.exe
 C:\Users\liza_\Desktop\ИС\ISLab-main\ISLab\obj\Debug\ISLab.pdb
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\ISLab.exe.config
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\ISLab.exe
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\ISLab.pdb
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\System.Buffers.dll
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\System.Memory.dll
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\System.Text.Json.dll
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\System.ValueTuple.dll
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\System.Buffers.xml
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\System.Memory.xml
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\System.Text.Json.xml
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\bin\Debug\System.ValueTuple.xml
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\obj\Debug\ISLab.csprojAssemblyReference.cache
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\obj\Debug\ISLab.FindApartmentForm.resources
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\obj\Debug\ISLab.FindHouseForm.resources
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\obj\Debug\ISLab.FindSteadForm.resources
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\obj\Debug\ISLab.MainForm.resources
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\obj\Debug\ISLab.FindOfficeForm.resources
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\obj\Debug\ISLab.ResultForm.resources
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\obj\Debug\ISLab.Properties.Resources.resources
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\obj\Debug\ISLab.csproj.GenerateResource.cache
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\obj\Debug\ISLab.csproj.CopyComplete
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\obj\Debug\ISLab.exe
+C:\Users\Аня\Downloads\ис лаба 1\ISLab\obj\Debug\ISLab.pdb
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\ISLab.exe.config
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\ISLab.exe
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\ISLab.pdb
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\System.Buffers.dll
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\System.Memory.dll
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\System.Text.Json.dll
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\System.ValueTuple.dll
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\System.Buffers.xml
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\System.Memory.xml
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\System.Text.Json.xml
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Аня\Downloads\Новая папка\ISLab\bin\Debug\System.ValueTuple.xml
+C:\Users\Аня\Downloads\Новая папка\ISLab\obj\Debug\ISLab.csprojAssemblyReference.cache
+C:\Users\Аня\Downloads\Новая папка\ISLab\obj\Debug\ISLab.FindApartmentForm.resources
+C:\Users\Аня\Downloads\Новая папка\ISLab\obj\Debug\ISLab.FindHouseForm.resources
+C:\Users\Аня\Downloads\Новая папка\ISLab\obj\Debug\ISLab.FindSteadForm.resources
+C:\Users\Аня\Downloads\Новая папка\ISLab\obj\Debug\ISLab.MainForm.resources
+C:\Users\Аня\Downloads\Новая папка\ISLab\obj\Debug\ISLab.FindOfficeForm.resources
+C:\Users\Аня\Downloads\Новая папка\ISLab\obj\Debug\ISLab.ResultForm.resources
+C:\Users\Аня\Downloads\Новая папка\ISLab\obj\Debug\ISLab.Properties.Resources.resources
+C:\Users\Аня\Downloads\Новая папка\ISLab\obj\Debug\ISLab.csproj.GenerateResource.cache
+C:\Users\Аня\Downloads\Новая папка\ISLab\obj\Debug\ISLab.csproj.CopyComplete
+C:\Users\Аня\Downloads\Новая папка\ISLab\obj\Debug\ISLab.exe
+C:\Users\Аня\Downloads\Новая папка\ISLab\obj\Debug\ISLab.pdb
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\ISLab.exe.config
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\ISLab.exe
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\ISLab.pdb
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\System.Buffers.dll
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\System.Memory.dll
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\System.Text.Json.dll
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\System.ValueTuple.dll
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\System.Buffers.xml
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\System.Memory.xml
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\System.Text.Json.xml
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\bin\Debug\System.ValueTuple.xml
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\obj\Debug\ISLab.csprojAssemblyReference.cache
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\obj\Debug\ISLab.FindApartmentForm.resources
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\obj\Debug\ISLab.FindHouseForm.resources
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\obj\Debug\ISLab.FindSteadForm.resources
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\obj\Debug\ISLab.MainForm.resources
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\obj\Debug\ISLab.FindOfficeForm.resources
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\obj\Debug\ISLab.ResultForm.resources
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\obj\Debug\ISLab.Properties.Resources.resources
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\obj\Debug\ISLab.csproj.GenerateResource.cache
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\obj\Debug\ISLab.csproj.CopyComplete
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\obj\Debug\ISLab.exe
+C:\Users\Аня\Downloads\Новая папка — копия\ISLab\obj\Debug\ISLab.pdb

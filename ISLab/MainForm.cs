@@ -34,7 +34,7 @@ namespace ISLab
 			this.Hide();
 		}
 
-		/*rivate Offer DeserializeJsonObject(string path)
+		/*private Offer DeserializeJsonObject(string path)
 		{
 			string jsonString = File.ReadAllText(path);
 			Offer obj = File.Exists(path) ? JsonSerializer.Deserialize<Offer>(jsonString) : new Offer();

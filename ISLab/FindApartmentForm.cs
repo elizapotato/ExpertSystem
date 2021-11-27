@@ -12,27 +12,27 @@ namespace ISLab
 {
 	public partial class FindApartmentForm : Form
 	{
-		public Apartment modelOfClientApartment = new Apartment();
+		public Apartment modelOfClientApartment = new Apartment(); // Создаём модель квартиры клиента
 		public FindApartmentForm()
-		{
+		{// Инициализируем 
 			InitializeComponent();
-			modelOfClientApartment.GeneralCharacteristics = new RealEstate();
+			modelOfClientApartment.GeneralCharacteristics = new RealEstate(); // Общие характеристики
 			this.FormClosing += FindApartmentForm_FormClosing;
 
-			modelOfClientApartment.GeneralCharacteristics.Price = 100000000;
-			modelOfClientApartment.GeneralCharacteristics.Square = 10000;
-			modelOfClientApartment.GeneralCharacteristics.Location = "В городе";
-			modelOfClientApartment.CountOfRooms = 10;
-			modelOfClientApartment.Comfort = "Есть";
-			modelOfClientApartment.Floor = 2;
-			modelOfClientApartment.Infrastructure = "Неразвитая";
-			modelOfClientApartment.MaxFloor = 100;
-			modelOfClientApartment.NewOrOld = "Вторичка";
-			modelOfClientApartment.Parking = "Нет";
-			modelOfClientApartment.TransportAccessibility = "Неразвитая";
-			modelOfClientApartment.TypeOfBuilding = "Кирпичный";
-			modelOfClientApartment.View = "Нет";
-			modelOfClientApartment.Years = 100;
+			modelOfClientApartment.GeneralCharacteristics.Price = 100000000; //Цена
+			modelOfClientApartment.GeneralCharacteristics.Square = 10000; //Площадь
+			modelOfClientApartment.GeneralCharacteristics.Location = "В городе"; //Расположение
+			modelOfClientApartment.CountOfRooms = 10; //Количество комнат
+			modelOfClientApartment.Elevator = "Нет"; // Наличие лифта
+			modelOfClientApartment.Floor = 2; // Этаж
+			modelOfClientApartment.Infrastructure = "Не имеет значения"; //Инфраструктура
+			modelOfClientApartment.MaxFloor = 100; // Максимальный этаж 
+			modelOfClientApartment.NewOrOld = "Вторичка"; 
+			modelOfClientApartment.Parking = "Нет"; //Парковка
+			modelOfClientApartment.TransportAccessibility = "Не имеет значения"; //Транспортная доступность
+			modelOfClientApartment.TypeOfBuilding = "Кирпичный"; //Тип постройки дома
+			modelOfClientApartment.View = "Нет"; // Красивый вид
+			modelOfClientApartment.Years = 100; //Возраст здания
 		}
 
 		private void FindApartmentForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -40,7 +40,7 @@ namespace ISLab
 			Application.Exit();
 		}
 
-		private void PriceComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void PriceComboBox_SelectedIndexChanged(object sender, EventArgs e) //Устанавливаем цену
 		{
 			if (PriceComboBox.SelectedItem.ToString() == "< 1000000")
 			{
@@ -60,7 +60,7 @@ namespace ISLab
 			}
 		}
 
-		private void PositionComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void PositionComboBox_SelectedIndexChanged(object sender, EventArgs e) //Устанавливаем расположение
 		{
 			if (PositionComboBox.SelectedItem.ToString() == "В городе")
 			{
@@ -72,7 +72,7 @@ namespace ISLab
 			}
 		}
 
-		private void SquareComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void SquareComboBox_SelectedIndexChanged(object sender, EventArgs e) //Устанавливаем площадь
 		{
 			if (SquareComboBox.SelectedItem.ToString() == "< 50")
 			{
@@ -88,7 +88,7 @@ namespace ISLab
 			}
 		}
 
-		private void InfastuctureComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void InfastuctureComboBox_SelectedIndexChanged(object sender, EventArgs e) //Устанавливаем инфраструктуру
 		{
 			if (InfastuctureComboBox.SelectedItem.ToString() == "Развитая")
 			{
@@ -96,17 +96,13 @@ namespace ISLab
 			}
 			else
 			{
-				modelOfClientApartment.Infrastructure = "Неразвитая";
+				modelOfClientApartment.Infrastructure = "Не имеет значения";
 			}
 		}
 
-		private void YearsComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void YearsComboBox_SelectedIndexChanged(object sender, EventArgs e) //Устанавливаем возраст здания
 		{
-			if (YearsComboBox.SelectedItem.ToString() == "Еще строится")
-			{
-				modelOfClientApartment.Years = 0;
-			}
-			else if (YearsComboBox.SelectedItem.ToString() == "меньше 10 лет")
+			if (YearsComboBox.SelectedItem.ToString() == "меньше 10 лет")
 			{
 				modelOfClientApartment.Years = 10;
 			}
@@ -124,7 +120,7 @@ namespace ISLab
 			}
 		}
 
-		private void FloorComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void FloorComboBox_SelectedIndexChanged(object sender, EventArgs e) //Устанавливаем этаж
 		{
 			if (FloorComboBox.SelectedItem.ToString() == "Первый этаж")
 			{
@@ -140,7 +136,7 @@ namespace ISLab
 			}
 		}
 
-		private void CountOfRoomsComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void CountOfRoomsComboBox_SelectedIndexChanged(object sender, EventArgs e) //Устанавливаем количество комнат
 		{
 			if (CountOfRoomsComboBox.SelectedItem.ToString() == "1")
 			{
@@ -164,7 +160,7 @@ namespace ISLab
 			}
 		}
 
-		private void MaterialsComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void MaterialsComboBox_SelectedIndexChanged(object sender, EventArgs e) //Устанавливаем тип постройки дома
 		{
 			if (MaterialsComboBox.SelectedItem.ToString() == "Панельный")
 			{
@@ -173,6 +169,10 @@ namespace ISLab
 			else if (MaterialsComboBox.SelectedItem.ToString() == "Кирпичный")
 			{
 				modelOfClientApartment.TypeOfBuilding = "Кирпичный";
+			}
+			else if (MaterialsComboBox.SelectedItem.ToString() == "Деревянный")
+			{
+				modelOfClientApartment.TypeOfBuilding = "Деревянный";
 			}
 			else
 			{
@@ -201,21 +201,11 @@ namespace ISLab
 			}
 			else
 			{
-				modelOfClientApartment.TransportAccessibility = "Неразвитая";
+				modelOfClientApartment.TransportAccessibility = "Не имеет значения";
 			}
 		}
 
-		private void ComfortCheckBox_CheckedChanged(object sender, EventArgs e)
-		{
-			if (ComfortCheckBox.Checked)
-			{
-				modelOfClientApartment.Comfort = "Есть";
-			}
-			else
-			{
-				modelOfClientApartment.Comfort = "Нет";
-			}
-		}
+		
 
 		private void ViewCheckBox_CheckedChanged(object sender, EventArgs e)
 		{
@@ -253,6 +243,18 @@ namespace ISLab
 			mainForm.Show();
 			this.Hide();
 
+		}
+
+		private void Elevator_CheckedChanged(object sender, EventArgs e)
+		{
+			if (Elevator.Checked)
+			{
+				modelOfClientApartment.Elevator = "Есть";
+			}
+			else
+			{
+				modelOfClientApartment.Elevator = "Нет";
+			}
 		}
 	}
 }

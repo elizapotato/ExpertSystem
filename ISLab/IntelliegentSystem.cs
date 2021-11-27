@@ -8,12 +8,12 @@ namespace ISLab
 {
 	public static class IntelliegentSystem
 	{
-		public static List<Office> FindOffice(Office clientOffice, List<Office> offices)
+		public static List<Office> FindOffice(Office clientOffice, List<Office> offices) //метод для поиска подходящей коммерческой недвижимости
 		{
-			List<Office> result = new List<Office>();
-			foreach(var variant in offices)
+			List<Office> result = new List<Office>(); //создаём результирующий список
+			foreach(var variant in offices) //для каждой коммерческой недвижимости в базе
 			{
-				if(CheckGeneralCharacteristics(clientOffice.GeneralCharacteristics, variant.GeneralCharacteristics) 
+				if(CheckGeneralCharacteristics(clientOffice.GeneralCharacteristics, variant.GeneralCharacteristics) //сравнение параметров
 					&& CheckOfficeCharacteristics(clientOffice, variant))
 				{
 					result.Add(variant);
@@ -21,12 +21,12 @@ namespace ISLab
 			}
 			return result;
 		}
-		public static List<House> FindHouse(House clientHouse, List<House> houses)
+		public static List<House> FindHouse(House clientHouse, List<House> houses) //метод для поиска подходящего дома
 		{
-			List<House> result = new List<House>();
-			foreach(var variant in houses)
+			List<House> result = new List<House>(); //создаём результирующий список
+			foreach (var variant in houses)
 			{
-				if(CheckGeneralCharacteristics(clientHouse.GeneralCharacteristics, variant.GeneralCharacteristics) &&
+				if(CheckGeneralCharacteristics(clientHouse.GeneralCharacteristics, variant.GeneralCharacteristics) && //сравнение параметров
 					CheckHouseCharacteristics(clientHouse, variant))
 				{
 					result.Add(variant);
@@ -34,12 +34,12 @@ namespace ISLab
 			}
 			return result;
 		}
-		public static List<Apartment> FindApartment(Apartment clientApartment, List<Apartment> apartments)
+		public static List<Apartment> FindApartment(Apartment clientApartment, List<Apartment> apartments) //метод для поиска подходящей квартиры
 		{
-			List<Apartment> result = new List<Apartment>();
+			List<Apartment> result = new List<Apartment>(); //создаём результирующий список
 			foreach (var variant in apartments)
 			{
-				if (CheckGeneralCharacteristics(clientApartment.GeneralCharacteristics, variant.GeneralCharacteristics) &&
+				if (CheckGeneralCharacteristics(clientApartment.GeneralCharacteristics, variant.GeneralCharacteristics) && //сравнение параметров
 					CheckApartmentCharacteristics(clientApartment, variant))
 				{
 					result.Add(variant);
@@ -47,10 +47,11 @@ namespace ISLab
 			}
 			return result;
 		}
-		public static List<Stead> FindStead(Stead clientStead, List<Stead> steads)
+		public static List<Stead> FindStead(Stead clientStead, List<Stead> steads) //метод для поиска подходящего земельного участка
 		{
-			List<Stead> result = new List<Stead>();
-			foreach(var variant in steads)
+			List<Stead> result = new List<Stead>(); //создаём результирующий список
+	        //сравнение параметров
+			foreach (var variant in steads)
 			{
 				if(CheckGeneralCharacteristics(clientStead.GeneralCharacteristics, variant.GeneralCharacteristics) && CheckSteadCharacteristics(clientStead, variant))
 				{
@@ -59,20 +60,20 @@ namespace ISLab
 			}
 			return result;
 		}
-		private static bool CheckGeneralCharacteristics (RealEstate clientModel, RealEstate listModel)
+		private static bool CheckGeneralCharacteristics (RealEstate clientModel, RealEstate listModel) //сравнение общих параметров
 		{
-			if(clientModel.Location == listModel.Location) 
+			if(clientModel.Location == listModel.Location) //сравнение расположений
 			{
-				if(clientModel.Price >= listModel.Price && clientModel.Square <= listModel.Square)
+				if(clientModel.Price >= listModel.Price && clientModel.Square <= listModel.Square) //сравнение цен и площадей
 				{
 					return true;
 				}
 			}
 			return false;
 		}
-		private static bool CheckOfficeCharacteristics (Office clientModel, Office listModel)
+		private static bool CheckOfficeCharacteristics (Office clientModel, Office listModel) //сравнений характеристик офисов
 		{
-			if (clientModel.CountOfRooms <= listModel.CountOfRooms && clientModel.CountOfWorkers <= listModel.CountOfWorkers && clientModel.Parking == listModel.Parking && clientModel.Specifications == listModel.Specifications)
+			if (clientModel.CountOfRooms <= listModel.CountOfRooms &&  clientModel.Parking == listModel.Parking && clientModel.Specifications == listModel.Specifications)
 			{
 				if(clientModel.Floor == 1 && clientModel.Floor == listModel.Floor && CheckOfficeRooms(clientModel, listModel))
 				{
@@ -89,7 +90,7 @@ namespace ISLab
 			}
 			return false;
 		}
-		private static bool CheckOfficeRooms(Office clientModel, Office listModel)
+		private static bool CheckOfficeRooms(Office clientModel, Office listModel) //сравнение количества помещений
 		{
 			if (clientModel.CountOfRooms <= listModel.CountOfRooms)
 			{
@@ -98,63 +99,47 @@ namespace ISLab
 			else return false;
 		}
 
-		private static bool CheckHouseCharacteristics(House clientModel, House listModel)
+		private static bool CheckHouseCharacteristics(House clientModel, House listModel) // сравнение характеристик домов
 		{
-			if (clientModel.TransportAccessibility == listModel.TransportAccessibility 
-				&& clientModel.Comfort == listModel.Comfort 
-				&& clientModel.Comunication == listModel.Comunication 
-				&& clientModel.TypeOfHouse == listModel.TypeOfHouse &&
-				(clientModel.Floors == listModel.Floors || clientModel.Floors == 4 && listModel.Floors >= 4))
+			if (clientModel.TransportAccessibility == listModel.TransportAccessibility //транспортная доступность
+			
+				&& clientModel.Comunication == listModel.Comunication //коммуникция
+				&& clientModel.TypeOfHouse == listModel.TypeOfHouse && //тип постройи дома
+				(clientModel.Floors == listModel.Floors || clientModel.Floors == 4 && listModel.Floors >= 4)) //этажи
 			{
 				return true;
 			}
 			return false;
 		}
-		private static bool CheckApartmentCharacteristics(Apartment clientModel, Apartment listModel)
+		private static bool CheckApartmentCharacteristics(Apartment clientModel, Apartment listModel) //сравнение характеристик квартир
 		{
-			if (clientModel.TransportAccessibility == listModel.TransportAccessibility
-				&& clientModel.Comfort == listModel.Comfort &&
-				clientModel.Infrastructure == listModel.Infrastructure
-				&& clientModel.TypeOfBuilding == listModel.TypeOfBuilding &&
-				clientModel.Parking == listModel.Parking &&
-				clientModel.View == listModel.View &&
-				clientModel.Years >= listModel.Years &&
-				clientModel.NewOrOld == listModel.NewOrOld &&
+			if (clientModel.TransportAccessibility == listModel.TransportAccessibility //транспортная доступность
+				&& 
+				clientModel.Infrastructure == listModel.Infrastructure //инфраструктура
+				&& clientModel.TypeOfBuilding == listModel.TypeOfBuilding && //тип постройки
+				clientModel.Elevator == listModel.Elevator && //наличие лифта
+				clientModel.Parking == listModel.Parking && //парковка
+				clientModel.View == listModel.View && //красивый вид
+				clientModel.Years >= listModel.Years && //возраст здания
+				clientModel.NewOrOld == listModel.NewOrOld && // вторичка или новостройка
+				//Этажи
 				(clientModel.Floor == listModel.Floor || (clientModel.Floor == 2 && (listModel.Floor>=2 && listModel.Floor<listModel.MaxFloor)) ||(clientModel.Floor == 3 && listModel.Floor == listModel.MaxFloor)))
 			{
 				return true;
 			}
 			return false;
 		}
-		private static bool CheckSteadCharacteristics(Stead clientModel, Stead listModel)
+		private static bool CheckSteadCharacteristics(Stead clientModel, Stead listModel) //сравнение характеристик земельных участков
 		{
-			if (clientModel.TransportAccessibility == listModel.TransportAccessibility
-				&& clientModel.Ecology == listModel.Ecology &&
-				CheckNearTeritotySteadDistance(clientModel, listModel))
+			if (clientModel.TransportAccessibility == listModel.TransportAccessibility //транспортная доступность
+				&& clientModel.Ecology == listModel.Ecology && //экология
+				clientModel.TypeOfSoil==listModel.TypeOfSoil) //тип почвы
 			{
 				return true;
 			}
 			return false;
 		}
-		private static bool CheckNearTeritotySteadDistance(Stead clientModel, Stead listModel)
-		{
-			if(clientModel.AdjacentTerritory <=2 && listModel.AdjacentTerritory <= 2)
-			{
-				return true;
-			}
-			else if(clientModel.AdjacentTerritory >=3 && clientModel.AdjacentTerritory <=5 && listModel.AdjacentTerritory >= 3 && listModel.AdjacentTerritory <= 5)
-			{
-				return true;
-			}
-			else if(clientModel.AdjacentTerritory > 5 && listModel.AdjacentTerritory >= 5)
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
+		
 
 	}
 

@@ -12,19 +12,19 @@ namespace ISLab
 {
 	public partial class FindSteadForm : Form
 	{
-		public Stead modelOfClientSted = new Stead();
+		public Stead modelOfClientSted = new Stead(); // создаём модель земельного участка
 		public FindSteadForm()
-		{
+		{// Инициализируем 
 			InitializeComponent();
-			modelOfClientSted.GeneralCharacteristics = new RealEstate();
+			modelOfClientSted.GeneralCharacteristics = new RealEstate(); // Общие характеристики
 			this.FormClosing += FindSteadForm_FormClosing;
 
-			modelOfClientSted.GeneralCharacteristics.Price = 100000000;
-			modelOfClientSted.GeneralCharacteristics.Square = 1000000;
-			modelOfClientSted.GeneralCharacteristics.Location = "В области";
-			modelOfClientSted.AdjacentTerritory = 5;
-			modelOfClientSted.Ecology = "Средняя";
-			modelOfClientSted.TransportAccessibility = "Неразвитая";
+			modelOfClientSted.GeneralCharacteristics.Price = 100000000; //цена
+			modelOfClientSted.GeneralCharacteristics.Square = 1000000; //площадь
+			modelOfClientSted.GeneralCharacteristics.Location = "В области"; //расположение
+			modelOfClientSted.TypeOfSoil = "Дерново-подзолистая"; //тип почвы
+			modelOfClientSted.Ecology = "Нет"; //экология
+			modelOfClientSted.TransportAccessibility = "Не имеет значения"; //транспортная доступность
 		}
 
 		private void FindSteadForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -37,7 +37,7 @@ namespace ISLab
 			ResultForm resultForm = new ResultForm(modelOfClientSted);
 			resultForm.Show();
 		}
-		private void PriceComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void PriceComboBox_SelectedIndexChanged(object sender, EventArgs e) //устанавливаем цену
 		{
 			if (PriceComboBox.SelectedItem.ToString() == "< 1000000")
 			{
@@ -58,12 +58,12 @@ namespace ISLab
 
 		}
 
-		private void PositionComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void PositionComboBox_SelectedIndexChanged(object sender, EventArgs e) //устанавливаем расположение
 		{
 			modelOfClientSted.GeneralCharacteristics.Location = PositionComboBox.SelectedItem.ToString();
 		}
 
-		private void SquareComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void SquareComboBox_SelectedIndexChanged(object sender, EventArgs e) //устанавливаем площадь
 		{
 			if (SquareComboBox.SelectedItem.ToString() == "< 1 га")
 			{
@@ -89,21 +89,11 @@ namespace ISLab
 
 		}
 
-		/*
-		private void NearTerritoryCheckBox_CheckedChanged(object sender, EventArgs e)
-		{
-			if (NearTerritoryCheckBox.Checked)
-			{
-				modelOfClientSted.AdjacentTerritory = "Есть";
-			}
-			else
-			{
-				modelOfClientSted.AdjacentTerritory = "Нет";
-			}
-		}
-		*/
+		
+		
+		
 
-		private void TransportCheckBox_CheckedChanged(object sender, EventArgs e)
+		private void TransportCheckBox_CheckedChanged(object sender, EventArgs e) //устанавливаем транспортную доступность
 		{
 			if (TransportCheckBox.Checked)
 			{
@@ -111,44 +101,46 @@ namespace ISLab
 			}
 			else
 			{
-				modelOfClientSted.TransportAccessibility = "Неразвитая";
+				modelOfClientSted.TransportAccessibility = "Не имеет значения";
 			}
 		}
 
-		private void EcologyCheckBox_CheckedChanged(object sender, EventArgs e)
+		private void EcologyCheckBox_CheckedChanged(object sender, EventArgs e) //устанавливаем экологию
 		{
 			if (EcologyCheckBox.Checked)
 			{
-				modelOfClientSted.Ecology = "Хорошая";
+				modelOfClientSted.Ecology = "Есть";
 			}
 			else
 			{
 
-				modelOfClientSted.Ecology = "Средняя";
+				modelOfClientSted.Ecology = "Нет";
 			}
 		}
 
-		private void NearTeritotyComboBox_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			if (NearTeritotyComboBox.SelectedItem.ToString() == "1-2")
-			{
-				modelOfClientSted.AdjacentTerritory = 2;
-			}
-			else if (NearTeritotyComboBox.SelectedItem.ToString() == "3-5")
-			{
-				modelOfClientSted.AdjacentTerritory = 5;
-			}
-			else
-			{
-				modelOfClientSted.AdjacentTerritory = 1000;
-			}
-		}
+		
 
 		private void GoBackButton_Click(object sender, EventArgs e)
 		{
 			MainForm mainForm = new MainForm();
 			mainForm.Show();
 			this.Hide();
+		}
+
+		private void TypeOfSoilComboBox_SelectedIndexChanged(object sender, EventArgs e) //устанавлиаем тип почвы
+		{
+			if (TypeOfSoilComboBox.SelectedItem.ToString() == "Дерново-подзолистая")
+			{
+				modelOfClientSted.TypeOfSoil = "Дерново-подзолистая";
+			}
+			else if (TypeOfSoilComboBox.SelectedItem.ToString() == "Серая лесная")
+			{
+				modelOfClientSted.TypeOfSoil = "Серая лесная";
+			}
+			else
+			{
+				modelOfClientSted.TypeOfSoil = "Торфяно-болотная";
+			}
 		}
 	}
 }

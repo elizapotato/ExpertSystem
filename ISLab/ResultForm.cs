@@ -14,15 +14,15 @@ namespace ISLab
 {
 	public partial class ResultForm : Form
 	{
-		private Offer offerList;
-		private Office clientOffice;
-		private House clientHouse;
-		private Apartment clientApartment;
-		private Stead clientStead;
-		private List<Office> officeResult;
-		private List<House> houseResult;
-		private List<Apartment> apartmentResult;
-		private List<Stead> steadResult;
+		private Offer offerList; //объект предложений из базы
+		private Office clientOffice; //объект коммерческой недвижимости
+		private House clientHouse; //объект дома
+		private Apartment clientApartment; //объект квартиры
+		private Stead clientStead; //объект земельного участка
+		private List<Office> officeResult; //список результатов по поиску коммерческой недвижимости
+		private List<House> houseResult; //список результатов по поиску домов
+		private List<Apartment> apartmentResult; //список результатов по поиску квартир
+		private List<Stead> steadResult; //список результатов по поиску земельных участков
 
 		public ResultForm()
 		{
@@ -70,7 +70,7 @@ namespace ISLab
 					richTextBox1.Text += res.GeneralCharacteristics.Adress + "\n";
 					richTextBox1.Text += res.GeneralCharacteristics.Square + " кв. м." + "\n";
 					richTextBox1.Text += res.Floors + " - количество этажей" + "\n";
-					richTextBox1.Text += res.Comfort + " удобства" + "\n";
+					
 					richTextBox1.Text += res.Comunication + " комуникации" + "\n";
 					richTextBox1.Text += res.TransportAccessibility + " - транспортная доступность" + "\n";
 					richTextBox1.Text += res.TypeOfHouse + "\n";
@@ -100,12 +100,12 @@ namespace ISLab
 					richTextBox1.Text += res.NewOrOld + "\n";
 					richTextBox1.Text += res.Floor + " этаж" + "\n";
 					richTextBox1.Text += res.MaxFloor + " - всего этажей" + "\n";
-					richTextBox1.Text += res.Comfort + " удобства" + "\n";
 					richTextBox1.Text += res.CountOfRooms + " количство комнат" + "\n";
 					richTextBox1.Text += res.TransportAccessibility + " транспортная доступность" + "\n";
 					richTextBox1.Text += res.TypeOfBuilding + "\n";
 					richTextBox1.Text += res.View + " красивый вид" + "\n";
 					richTextBox1.Text += res.Parking + " парковка" + "\n";
+					richTextBox1.Text += res.Elevator + "Наличие лифта" + "\n";
 					richTextBox1.Text += "...\n";
 				}
 			}
@@ -129,7 +129,7 @@ namespace ISLab
 					richTextBox1.Text += res.GeneralCharacteristics.Location + "\n";
 					richTextBox1.Text += res.GeneralCharacteristics.Adress + "\n";
 					richTextBox1.Text += res.GeneralCharacteristics.Square + " га." + "\n";
-					richTextBox1.Text += res.AdjacentTerritory + " км. - прилежащая территория" + "\n";
+					richTextBox1.Text += res.TypeOfSoil + " Тип почвы" + "\n";
 					richTextBox1.Text += res.Ecology + " экология" + "\n";
 					richTextBox1.Text += res.TransportAccessibility + " - транспортная доступность" + "\n";
 					richTextBox1.Text += "...\n";
@@ -141,7 +141,7 @@ namespace ISLab
 				richTextBox1.Text = "Ничего подходящего не найдено(";
 			}
 		}
-		private void TakeOffers()
+		private void TakeOffers() // передаём из базы
 		{
 			string path = Directory.GetCurrentDirectory() + @"\JsonOffersList.json";
 			string jsonString = File.ReadAllText(path);

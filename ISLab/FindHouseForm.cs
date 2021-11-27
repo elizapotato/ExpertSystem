@@ -12,30 +12,28 @@ namespace ISLab
 {
 	public partial class FindHouseForm : Form
 	{
-		public House modelOfClientHouse = new House();
+		public House modelOfClientHouse = new House(); //созздаём модель дома клиента
 		public FindHouseForm()
-		{
+		{// инициализируем параметры
 			InitializeComponent();
-			modelOfClientHouse.GeneralCharacteristics = new RealEstate();
-			this.FormClosing += FindHouseForm_FormClosing;
-
-			modelOfClientHouse.GeneralCharacteristics.Price = 1000000000;
-			modelOfClientHouse.GeneralCharacteristics.Square = 1000000;
-			modelOfClientHouse.Comunication = "Средняя";
-			modelOfClientHouse.Comfort = "Нет";
-			modelOfClientHouse.Floors = 1;
-			modelOfClientHouse.TransportAccessibility = "Неразвитая";
-			modelOfClientHouse.TypeOfHouse = "Бревенчатый";
-			modelOfClientHouse.GeneralCharacteristics.Location = "За городом";
+			modelOfClientHouse.GeneralCharacteristics = new RealEstate();  //общие параметры
+			this.FormClosing += FindHouseForm_FormClosing; 
+			modelOfClientHouse.GeneralCharacteristics.Price = 1000000000; //цена
+			modelOfClientHouse.GeneralCharacteristics.Square = 1000000; // площадь
+			modelOfClientHouse.Comunication = "Нет"; //коммуникация
+			modelOfClientHouse.Floors = 1; //этаж
+			modelOfClientHouse.TransportAccessibility = "Не имеет значения"; //транспортная доступность
+			modelOfClientHouse.TypeOfHouse = "Бревенчатый"; //тип дома
+			modelOfClientHouse.GeneralCharacteristics.Location = "За городом"; //расположение
 
 		}
 
-		private void FindHouseForm_FormClosing(object sender, FormClosingEventArgs e)
+		private void FindHouseForm_FormClosing(object sender, FormClosingEventArgs e) //закрытие формы
 		{
 			Application.Exit();
 		}
 
-		private void PriceComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void PriceComboBox_SelectedIndexChanged(object sender, EventArgs e) //устанавливаем цены
 		{
 			if (PriceComboBox.SelectedItem.ToString() == "< 1000000")
 			{
@@ -55,7 +53,7 @@ namespace ISLab
 			}
 		}
 
-		private void PositionComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void PositionComboBox_SelectedIndexChanged(object sender, EventArgs e) // указание места положения 
 		{
 			if (PositionComboBox.SelectedItem.ToString() == "В городе")
 			{
@@ -67,7 +65,7 @@ namespace ISLab
 			}
 		}
 
-		private void TransportComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void TransportComboBox_SelectedIndexChanged(object sender, EventArgs e) //указание транспортной доступности
 		{
 			if (TransportComboBox.SelectedItem.ToString() == "Развитая")
 			{
@@ -75,11 +73,11 @@ namespace ISLab
 			}
 			else
 			{
-				modelOfClientHouse.TransportAccessibility = "Неразвитая";
+				modelOfClientHouse.TransportAccessibility = "Не имеет значения";
 			}
 		}
 
-		private void TypeOfHouseComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void TypeOfHouseComboBox_SelectedIndexChanged(object sender, EventArgs e) //тип постройки дома
 		{
 			if (TypeOfHouseComboBox.SelectedItem.ToString() == "Деревянный")
 			{
@@ -94,7 +92,7 @@ namespace ISLab
 			}
 		}
 
-		private void SizeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void SizeComboBox_SelectedIndexChanged(object sender, EventArgs e) //площадь
 		{
 			if (SizeComboBox.SelectedItem.ToString() == "< 80")
 			{
@@ -110,7 +108,7 @@ namespace ISLab
 			}
 		}
 
-		private void CountOfFloorsComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void CountOfFloorsComboBox_SelectedIndexChanged(object sender, EventArgs e) //количество этажей
 		{
 			if (CountOfFloorsComboBox.SelectedItem.ToString() == "1")
 			{
@@ -131,27 +129,15 @@ namespace ISLab
 		}
 
 
-		private void ComfortCheckBox_CheckedChanged(object sender, EventArgs e)
-		{
-			if (ComfortCheckBox.Checked)
-			{
-				modelOfClientHouse.Comfort = "Есть";
-			}
-			else
-			{
-				modelOfClientHouse.Comfort = "Нет";
-			}
-		}
-
-		private void ComunicationCheckBox_CheckedChanged(object sender, EventArgs e)
+		private void ComunicationCheckBox_CheckedChanged(object sender, EventArgs e) //Коммуникация
 		{
 			if (ComunicationCheckBox.Checked)
 			{
-				modelOfClientHouse.Comunication = "Хорошая";
+				modelOfClientHouse.Comunication = "Есть";
 			}
 			else
 			{
-				modelOfClientHouse.Comunication = "Средняя";
+				modelOfClientHouse.Comunication = "Нет";
 			}
 		}
 

@@ -12,20 +12,20 @@ namespace ISLab
 {
 	public partial class FindOfficeForm : Form
 	{
-		public Office modelOfClientOffice = new Office();
+		public Office modelOfClientOffice = new Office(); //Создаём модель коммерческой недвижимости клиента
 		public FindOfficeForm()
-		{
+		{// Инициализируем
 			InitializeComponent();
-			modelOfClientOffice.GeneralCharacteristics = new RealEstate();
+			modelOfClientOffice.GeneralCharacteristics = new RealEstate();  //Общие параметры
 			this.FormClosing += FindOfficeForm_FormClosing;
-			modelOfClientOffice.CountOfRooms = 1;
-			modelOfClientOffice.CountOfWorkers = 5;
-			modelOfClientOffice.Floor = 1;
-			modelOfClientOffice.Parking = "Нет";
-			modelOfClientOffice.Specifications = "Нет";
-			modelOfClientOffice.Years = 100;
-			modelOfClientOffice.GeneralCharacteristics.Price = 100000000;
-			modelOfClientOffice.GeneralCharacteristics.Square = 100000;
+			modelOfClientOffice.CountOfRooms = 1; //Количество помещений
+			
+			modelOfClientOffice.Floor = 1; //Этаж
+			modelOfClientOffice.Parking = "Нет"; //Стоянка
+			modelOfClientOffice.Specifications = "Не имеет значения"; //Инфраструктура
+			modelOfClientOffice.Years = 100; //Возраст здания
+			modelOfClientOffice.GeneralCharacteristics.Price = 100000000; // Цена
+			modelOfClientOffice.GeneralCharacteristics.Square = 100000; //Площадь
 		}
 
 		private void FindOfficeForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -43,7 +43,7 @@ namespace ISLab
 
 		}
 
-		private void PriceComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void PriceComboBox_SelectedIndexChanged(object sender, EventArgs e) //Устанавливаем цену
 		{
 			if (PriceComboBox.SelectedItem.ToString() == "< 1000000")
 			{
@@ -73,7 +73,7 @@ namespace ISLab
 
 		}
 
-		private void SquareComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void SquareComboBox_SelectedIndexChanged(object sender, EventArgs e) //Устанавливаем площадь
 		{
 			if (SquareComboBox.SelectedItem.ToString() == "< 50")
 			{
@@ -89,13 +89,9 @@ namespace ISLab
 			}
 		}
 
-		private void YearsComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void YearsComboBox_SelectedIndexChanged(object sender, EventArgs e) //Устанавливаем возраст здания
 		{
-			if (YearsComboBox.SelectedItem.ToString() == "Еще строится")
-			{
-				modelOfClientOffice.Years = 0;
-			}
-			else if (YearsComboBox.SelectedItem.ToString() == "меньше 10 лет")
+			if (YearsComboBox.SelectedItem.ToString() == "меньше 10 лет")
 			{
 				modelOfClientOffice.Years = 10;
 			}
@@ -113,7 +109,7 @@ namespace ISLab
 			}
 		}
 
-		private void InfastuctureComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void InfastuctureComboBox_SelectedIndexChanged(object sender, EventArgs e) //Устанавливаем инфраструктуру
 		{
 			if (InfastuctureComboBox.SelectedItem.ToString() == "Развитая")
 			{
@@ -121,14 +117,14 @@ namespace ISLab
 			}
 			else
 			{
-				modelOfClientOffice.Specifications = "Неразвитая";
+				modelOfClientOffice.Specifications = "Не имеет значения";
 			}
 		}
 
 		
 
 
-		private void CountOfRoomsComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void CountOfRoomsComboBox_SelectedIndexChanged(object sender, EventArgs e) //Устанавливаем количество помещений
 		{
 			if (CountOfRoomsComboBox.SelectedItem.ToString() == "1 - 2")
 			{
@@ -148,7 +144,7 @@ namespace ISLab
 			}
 		}
 
-		private void FloorComboBox_SelectedIndexChanged(object sender, EventArgs e)
+		private void FloorComboBox_SelectedIndexChanged(object sender, EventArgs e) //Устанавливаем этаж
 		{
 			if (FloorComboBox.SelectedItem.ToString() == "1")
 			{
@@ -161,7 +157,7 @@ namespace ISLab
 
 		}
 
-		private void ParkingCheckBox_CheckedChanged(object sender, EventArgs e)
+		private void ParkingCheckBox_CheckedChanged(object sender, EventArgs e) //Устанавливаем парковку
 		{
 			if (ParkingCheckBox.Checked)
 			{
@@ -173,25 +169,6 @@ namespace ISLab
 			}
 		}
 
-		private void CountOfWorkersComboBox_SelectedIndexChanged(object sender, EventArgs e)	//КОЛ-ВО ПЕРСОНАЛА (УБРАЛИ)
-		{
-			if (CountOfWorkersComboBox.SelectedItem.ToString() == "до 10")
-			{
-				modelOfClientOffice.CountOfWorkers = 0;
-			}
-			else if (CountOfWorkersComboBox.SelectedItem.ToString() == "10 - 20")
-			{
-				modelOfClientOffice.CountOfWorkers = 10;
-			}
-			else if (CountOfWorkersComboBox.SelectedItem.ToString() == "20 - 50")
-			{
-				modelOfClientOffice.CountOfWorkers = 20;
-			}
-			else
-			{
-				modelOfClientOffice.CountOfWorkers = 50;
-			}
-		}
 
 		private void NextButton_Click(object sender, EventArgs e)
 		{
@@ -199,12 +176,12 @@ namespace ISLab
 			resultForm.Show();
 		}
 
-		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) //Устанавливаем общие параметры
 		{
 			modelOfClientOffice.GeneralCharacteristics.Location = comboBox1.SelectedItem.ToString();
 	    }
 
-		private void PriceComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
+		private void PriceComboBox_SelectedIndexChanged_1(object sender, EventArgs e) //Устанавливаем цены
 		{
 			if (PriceComboBox.SelectedItem.ToString() == "< 1000000")
 			{

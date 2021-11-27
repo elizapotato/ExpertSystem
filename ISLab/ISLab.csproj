@@ -107,7 +107,6 @@
     <Compile Include="ResultForm.Designer.cs">
       <DependentUpon>ResultForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gen.cs" />
     <Compile Include="IntelliegentSystem.cs" />
     <Compile Include="Modesl.cs" />
     <Compile Include="MainForm.cs">
